@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One&Only</title>
+    <title>TADESA</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="icon" type="image/ico" href="HTML/img/icono.ico"/>
+    <link rel="icon" type="image/ico" href="HTML/img/talleres.ico"/>
 
     <link href="HTML/css/stylesheets.css" rel="stylesheet" type="text/css" />
 
@@ -30,7 +30,7 @@
                 <div class="head">
                     <div class="user">
                         <div class="info ">
-                            <img src="HTML/img/LogoNegro.png" class="img-circle img-thumbnail"/>
+                            <img src="HTML/img/talleres.png" class="img-circle img-thumbnail"/>
                         </div>
                     </div>
                 </div>

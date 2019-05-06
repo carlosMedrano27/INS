@@ -57,12 +57,12 @@ if(@$_SESSION['Usuario'] == ""){
 
       $Usuario=$_REQUEST['Codigo'];
 
-      $query = "SELECT * FROM usuario WHERE Codigo ='$Usuario'";
+      $query = "SELECT * FROM Usuarios inner join Personas on Personas.CodPersona = Usuarios.CodPersona WHERE CodUsuario ='$Usuario'";
       $resultado= $conexion->query($query);
       $row = $resultado->fetch_assoc();
       ?>
         <div class="row">
-          <form method="POST" action="MoUsuario.php?Codigo=<?php echo $row['Codigo']; ?>" enctype="multipart/form-data">
+          <form method="POST" action="MoUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>" enctype="multipart/form-data">
 
             <div class="col-md-2">
 
@@ -73,35 +73,6 @@ if(@$_SESSION['Usuario'] == ""){
 
                     </div>
                     <div class="head bg-dot30 np tac">
-                      <?php
-                      $img=$row['Img1'];
-                      if ($img=="") {
-                      ?>
-                        <img src="img/usuario.jpg" value="img/Sinimagen.jpg" id="imagen" class="img-rounded" height="100px" width="100px"/>
-                        <?php
-                        }
-                        else {
-                        ?>
-                        <img id="imagen" src="data:image/jpg;base64,<?php echo base64_encode($row['Img1']); ?>" value="data:image/jpg;base64,<?php echo base64_encode($row['Imagen']); ?>"  class="img-rounded" height="100px" width="100px"/>
-
-                      <?php
-                      }
-
-                       ?>
-
-                        <script>
-                        var openFile = function(event) {
-                          var input = event.target;
-
-                          var reader = new FileReader();
-                          reader.onload = function(){
-                            var dataURL = reader.result;
-                            var output = document.getElementById('imagen');
-                            output.src = dataURL;
-                          };
-                          reader.readAsDataURL(input.files[0]);
-                        };
-                        </script>
                     </div>
                     <div class="content controls">
                         <div class="form-row">

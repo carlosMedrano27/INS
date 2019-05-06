@@ -13,7 +13,7 @@
                        <span class="sr-only">Toggle navigation</span>
                        <span class="icon-reorder"></span>
                    </button>
-                   <a class="navbar-brand" href="Inicio.php"><img src="img/LogoB.png" width="35px" height="35px" /></a>
+                   <a class="navbar-brand" href="Inicio.php"><img src="img/talleres.png" width="35px" height="35px" /></a>
                </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                   <ul class="nav navbar-nav">
@@ -99,7 +99,7 @@
                            <?php
                              $Codigo=@$_SESSION['Codigo'];
                               include("conexion.php");
-                             $query="SELECT usuario.Usuario  FROM usuario where Codigo=$Codigo";
+                             $query="SELECT Usuarios.Usuario  FROM Usuarios where Tipo=$Codigo";
                               $resultado= $conexion->query($query);
                             while ($row = $resultado->fetch_assoc()){
                             ?>

@@ -5,14 +5,7 @@
 <div class="block block-drop-shadow">
     <div class="user bg-default bg-light-rtl">
         <div class="info">
-          <?php
-          $Codigo=@$_SESSION['Codigo'];
-          include("conexion.php");
-          $query="SELECT usuario.Img1  FROM usuario where Codigo=$Codigo";
-          $resultado= $conexion->query($query);
-          while ($row = $resultado->fetch_assoc()){
-          ?>
-<img class="img-rounded" width="100px" height="100px"src="data:image/jpg;base64,<?php echo base64_encode($row['Img1']); ?> "/>        </div>
+<img class="img-rounded" width="100px" height="100px" src="img/talleres.png"/>        </div>
     </div>
     <div class="content list-group list-group-icons">
         <a href="Inicio.php" class="list-group-item"><span class="icon-home"></span>Inicio</a>
@@ -54,7 +47,6 @@
                       <ul class="dropdown-submenu">
                         <li><a href="MCarrusel.php">Carrusel</a></li>
                         <li><a href="Bitacora.php">Bit&aacute;cora</a></li>
-                       
                       </ul>
                   </li>
                 </ul>
@@ -96,6 +88,3 @@
     </div>
 
 </div>
-<?php
-}
-?>

@@ -8,11 +8,11 @@ if(@$_SESSION['Usuario'] == ""){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One&Only</title>
+    <title>TADESA</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+    <link rel="icon" type="image/ico" href="img/talleres.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
 
@@ -64,7 +64,6 @@ include 'Nav.php';
                                     <th width="25%">Nombre</th>
                                     <th width="25%">Apellido</th>
                                     <th width="25%">Correo</th>
-                                    <th width="10%">Imagen</th>
                                     <th width="10%">Modificar</th>
                                     <th width="10%">Eliminar</th>
                                 </tr>
@@ -73,7 +72,7 @@ include 'Nav.php';
                               <?php
                               $Codigo=@$_SESSION['Codigo'];
                               include("conexion.php");
-                              $query="SELECT*FROM usuario WHERE Codigo!='271112' AND Codigo!=$Codigo ";
+                              $query="SELECT*FROM Usuarios inner join Personas on Usuarios.CodPersona = Personas.CodPersona";
                               $resultado= $conexion->query($query);
                               while ($row = $resultado->fetch_assoc()){
                               ?>
@@ -82,22 +81,9 @@ include 'Nav.php';
                                     <td><?php echo $row['Nombre']; ?></td>
                                     <td><?php echo $row['Apellido']; ?></td>
                                     <td><?php echo $row['Correo']; ?></td>
-                                    <?php
-                                    $img= $row['Img1'];;
-                                    if ($img=="") {
-                                      ?>
-                                      <td><center><img height="40px" width="40px" src="img/Sinimagen.jpg"></center></td>
-                                      <?php
-                                    }
-                                    else {
-                                      ?>
-                                      <td><center><img height="40px" width="40px" src="data:image/jpg;base64,<?php echo base64_encode($row['Img1']); ?> "/></center></td>
-                                    <?php
-                                    }
-                                     ?>
-                                  <td><center><a href="UModificar.php?Codigo=<?php echo $row['Codigo']; ?>"><button type="button" class="btn btn-info btn-xs">
+                                  <td><center><a href="UModificar.php?Codigo=<?php echo $row['CodUsuario']; ?>"><button type="button" class="btn btn-info btn-xs">
                       								<span class="glyphicon icon-pencil icon-2x"></span></button></a></center></td>
-        						              <td><center><a href="ElUsuario.php?Codigo=<?php echo $row['Codigo']; ?>" type="button" class="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este usuario?');"><button type="button" class="btn btn-danger btn-xs">
+        						              <td><center><a href="ElUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>" type="button" class="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este usuario?');"><button type="button" class="btn btn-danger btn-xs">
                       								<span class="glyphicon icon-remove icon-2x"></span></button></a></center></td>
                                   </tr>
                                 <?php
