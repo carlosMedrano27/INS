@@ -15,7 +15,7 @@ if(@$_SESSION['Usuario'] == ""){
     <link rel="icon" type="image/ico" href="img/talleres.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script type='text/javascript' src='js/plugins/jquery/jquery.min.js'></script>
     <script type='text/javascript' src='js/plugins/jquery/jquery-ui.min.js'></script>
     <script type='text/javascript' src='js/plugins/jquery/jquery-migrate.min.js'></script>
@@ -72,7 +72,7 @@ include 'Nav.php';
                               <?php
                               $Codigo=@$_SESSION['Codigo'];
                               include("conexion.php");
-                              $query="SELECT*FROM Usuarios inner join Personas on Usuarios.CodPersona = Personas.CodPersona";
+                              $query="SELECT*FROM Usuarios inner join Personas on Usuarios.CodPersona = Personas.CodPersona WHERE CodUsuario!=$Codigo AND Tipo=1";
                               $resultado= $conexion->query($query);
                               while ($row = $resultado->fetch_assoc()){
                               ?>

@@ -15,6 +15,7 @@ if(@$_SESSION['Usuario'] == ""){
     <link rel="icon" type="image/ico" href="favicon.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <script type='text/javascript' src='js/plugins/jquery/jquery.min.js'></script>
     <script type='text/javascript' src='js/plugins/jquery/jquery-ui.min.js'></script>

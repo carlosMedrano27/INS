@@ -8,13 +8,14 @@ if(@$_SESSION['Usuario'] == ""){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One&Only</title>
+    <title>TADESA</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+    <link rel="icon" type="image/ico" href="img/talleres.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <script type='text/javascript' src='js/plugins/jquery/jquery.min.js'></script>
     <script type='text/javascript' src='js/plugins/jquery/jquery-ui.min.js'></script>
@@ -68,10 +69,6 @@ include 'Nav.php';
                                     <th width="10%">Correo</th>
                                     <th width="10%">Telefono</th>
                                     <th width="10%">Pais</th>
-                                    <th width="10%">Departamento</th>
-                                    <th width="10%">Ciudad</th>
-                                    <th width="10%">Codigo Postal</th>
-                                    <th width="5%">Imagen</th>
                                     <th width="5%">Modificar</th>
                                     <th width="5%">Eliminar</th>
 
@@ -80,7 +77,7 @@ include 'Nav.php';
                               <?php
                               $Codigo=@$_SESSION['Codigo'];
                               include("conexion.php");
-                              $query="SELECT*FROM clientes  ";
+                              $query="SELECT*FROM Usuarios inner join Personas on Usuarios.CodPersona = Personas.CodPersona inner join Paises on Personas.CodPais = Paises.CodPais WHERE Usuarios.Tipo=0";
                               $resultado= $conexion->query($query);
                               while ($row = $resultado->fetch_assoc()){
                               ?>
@@ -91,25 +88,9 @@ include 'Nav.php';
                                     <td><?php echo $row['Correo']; ?></td>
                                     <td><?php echo $row['Telefono']; ?></td>
                                     <td><?php echo $row['Pais']; ?></td>
-                                    <td><?php echo $row['Departamento']; ?></td>
-                                    <td><?php echo $row['Ciudad']; ?></td>
-                                    <td><?php echo $row['CodigoPostal']; ?></td>
-                                    <?php
-                                    $img= $row['Img'];;
-                                    if ($img=="") {
-                                      ?>
-                                      <td><center><img height="40px" width="40px" src="img/usuario.jpg"></center></td>
-                                      <?php
-                                    }
-                                    else {
-                                      ?>
-                                      <td><center><img height="40px" width="40px" src="data:image/jpg;base64,<?php echo base64_encode($row['Img']); ?> "/></center></td>
-                                    <?php
-                                    }
-                                     ?>
-                                     <td><center><a href="CiModificar.php?Codigo=<?php echo $row['Codigo']; ?>"><button type="button" class="btn btn-info btn-xs">
-                     								<span class="glyphicon icon-pencil icon-2x"></span></button></a></center></td>
-       						              <td><center><a href="ElClientes.php?Codigo=<?php echo $row['Codigo']; ?>" type="button" class="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este producto?');"><button type="button" class="btn btn-danger btn-xs">
+                                    <td><center><a href="CiModificar.php?Codigo=<?php echo $row['CodUsuario']; ?>"><button type="button" class="btn btn-info btn-xs">
+    <span class="glyphicon icon-pencil icon-2x"></span></button></a></center></td>
+           						              <td><center><a href="ElClientes.php?Codigo=<?php echo $row['CodUsuario']; ?>" type="button" class="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este producto?');"><button type="button" class="btn btn-danger btn-xs">
                      								<span class="glyphicon icon-remove icon-2x"></span></button></a></center></td>
 
                                 </tr>

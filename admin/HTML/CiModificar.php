@@ -16,6 +16,7 @@ if(@$_SESSION['Usuario'] == ""){
     <link rel="icon" type="image/ico" href="img/icono.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <script type='text/javascript' src='js/plugins/jquery/jquery.min.js'></script>
     <script type='text/javascript' src='js/plugins/jquery/jquery-ui.min.js'></script>
@@ -53,68 +54,11 @@ include 'Nav.php';
         include("conexion.php");
 
         $cod=$_REQUEST['Codigo'];
-        $query = "SELECT * FROM clientes WHERE Codigo ='$cod'";
+        $query = "SELECT * FROM Usuarios inner join Personas on Personas.CodPersona = Usuarios.CodPersona WHERE CodUsuario ='$cod'";
         $resultado= $conexion->query($query);
         $row = $resultado->fetch_assoc();
         ?>
-          <form method="POST" action="MoClientes.php?Codigo=<?php echo $row['Codigo']; ?>" enctype="multipart/form-data">
-
-            <div class="col-md-2">
-
-                <div class="block block-drop-shadow">
-
-                    <div class="head bg-dot30 npb">
-                        <h2>Imagen</h2>
-
-                    </div>
-                    <div class="head bg-dot30 np tac">
-                      <?php
-                      $img=$row['Img'];
-                      if ($img=="") {
-                      ?>
-                        <img src="img/usuario.jpg" value="img/Sinimagen.jpg" id="imagen" class="img-rounded" height="100px" width="100px"/>
-                        <?php
-                        }
-                        else {
-                        ?>
-                        <img id="imagen" src="data:image/jpg;base64,<?php echo base64_encode($row['Img']); ?>" value="data:image/jpg;base64,<?php echo base64_encode($row['Imagen']); ?>"  class="img-rounded" height="100px" width="100px"/>
-
-                      <?php
-                      }
-
-                       ?>
-                        <script>
-                        var openFile = function(event) {
-                          var input = event.target;
-
-                          var reader = new FileReader();
-                          reader.onload = function(){
-                            var dataURL = reader.result;
-                            var output = document.getElementById('imagen');
-                            output.src = dataURL;
-                          };
-                          reader.readAsDataURL(input.files[0]);
-                        };
-                        </script>
-                    </div>
-                    <div class="content controls">
-                        <div class="form-row">
-                            <div class="col-md-12">
-                                <div class="input-group file">
-                                    <input type="text" class="form-control" required name="in" Placeholder="img/usuario.jpg"/>
-                                    <input type="file" id="imgInp" required name="img"  onchange='openFile(event)' />
-                                    <span class="input-group-btn">
-                                        <button class="btn" type="button">Buscar</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                </div>
-
-
-
-            </div>
+          <form method="POST" action="MoClientes.php?Codigo=<?php echo $row['CodUsuario']; ?>" enctype="multipart/form-data">
 
             <div class="col-md-8">
 
@@ -124,7 +68,7 @@ include 'Nav.php';
                         <h2>Modificar Cliente</h2>
                     </div>
                     <form method="post" action="insertar.php">
-                      <div class="content controls">
+                        <div class="content controls">
                         <div class="form-row">
                             <div class="col-md-3">Usuario:</div>
                             <div class="col-md-9">
@@ -161,13 +105,6 @@ include 'Nav.php';
                                 <input type="text" name="telefono" value="<?php echo $row['Telefono']; ?>" placeholder="Ingresar Teléfono">
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-md-3">Dirección:</div>
-                            <div class="col-md-9">
-                                <input type="text" name="direccion" value="<?php echo $row['Direccion']; ?>" placeholder="Ingresar Dirección">
-                            </div>
-                        </div>
-
                         <div class="tar">
                         <button class="btn btn-default btn-clean">Guardar</button>
                     </div>

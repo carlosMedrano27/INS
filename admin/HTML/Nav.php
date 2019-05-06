@@ -66,7 +66,7 @@
                         if ($_SESSION["Nivel"]==1){
                       ?>
                       <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span style="font-family:'Segoe UI Symbol';color:white;font-size:15px;">&#xe115;</span>Ajustes</a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fas fa-users"></span>Ajustes</a>
                           <ul class="dropdown-menu">
                             <li>
                                 <a href="#">Usuarios<i class="icon-angle-right pull-right"></i></a>
