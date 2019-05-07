@@ -72,7 +72,7 @@ include 'Nav.php';
                               <?php
                               $Codigo=@$_SESSION['Codigo'];
                               include("conexion.php");
-                              $query="SELECT*FROM Usuarios inner join Personas on Usuarios.CodPersona = Personas.CodPersona WHERE CodUsuario!=$Codigo AND Tipo=1";
+                              $query="SELECT*FROM Usuarios inner join Personas on Usuarios.CodPersona = Personas.CodPersona WHERE Tipo=1";
                               $resultado= $conexion->query($query);
                               while ($row = $resultado->fetch_assoc()){
                               ?>

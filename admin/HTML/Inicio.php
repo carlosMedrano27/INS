@@ -9,11 +9,11 @@ if(@$_SESSION['Usuario'] == ""){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One&Only</title>
+    <title>TADESA</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+    <link rel="icon" type="image/ico" href="img/talleres.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
 

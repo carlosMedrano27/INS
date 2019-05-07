@@ -99,7 +99,7 @@
                            <?php
                              $Codigo=@$_SESSION['Codigo'];
                               include("conexion.php");
-                             $query="SELECT Usuarios.Usuario  FROM Usuarios where Tipo=$Codigo";
+                             $query="SELECT Usuarios.Usuario  FROM Usuarios where CodUsuario=$Codigo ";
                               $resultado= $conexion->query($query);
                             while ($row = $resultado->fetch_assoc()){
                             ?>

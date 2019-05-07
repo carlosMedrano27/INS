@@ -63,7 +63,7 @@ if(@$_SESSION['Usuario'] == ""){
       $row = $resultado->fetch_assoc();
       ?>
         <div class="row">
-          <form method="POST" action="MoUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>" enctype="multipart/form-data">
+          <form method="POST" action="MoUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>&CodPersona=<?php echo $row['CodPersona']; ?>" enctype="multipart/form-data">
 
             <div class="col-md-2">
 
