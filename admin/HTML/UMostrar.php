@@ -33,7 +33,6 @@ if(@$_SESSION['Usuario'] == ""){
 <?php
 include 'Nav.php';
 ?>
-
         <div class="row">
             <div class="col-md-12">
                 <ol class="breadcrumb">
@@ -42,13 +41,27 @@ include 'Nav.php';
                 </ol>
             </div>
         </div>
-      <div class="row">
+        <div class="notice">
+	<?php
+	if (isset($_GET["status"]) AND $_GET["status"]=="success") { ?>
+		<div class="alert alert-success alert-dismissible fade in">
+	        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			    <strong>Success!</strong> User updated successfully.
+			</div>
+		<?php } 
+		if (isset($_GET["status"]) AND $_GET["status"]=="error") { ?>
+			<div class="alert alert-danger alert-dismissible fade in">
+			    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			    <strong>Error!</strong> Sorry, An error occoured.
+			</div>
+		<?php } ?>
+	</div>
+    <div class="row">
         <div class="col-md-2">
         <?php
         include("Lateral.php")
         ?>
-        </div>
-
+    </div>
             <div class="col-md-10">
 
                 <div class="block">

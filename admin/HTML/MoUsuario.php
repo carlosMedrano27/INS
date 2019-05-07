@@ -16,20 +16,14 @@
       $query = "UPDATE Usuarios SET Usuario='$usuario' WHERE CodUsuario='$Codigo'";
       $resultado= $conexion->query($query);
       if ($resultado) {
-        header("Location: UMostrar.php");
+        header("Location: UMostrar.php?status=success");
       }else  {
-        echo'<script type="text/javascript">
-        alert("Tarea No Guardada");
-        window.location.href="UMostrar.php";
-        </script>';
+        header("Location: UMostrar.php?status=error");
         }
 
     }
     else {
-      echo'<script type="text/javascript">
-        alert("Tarea No Guardada");
-        window.location.href="UMostrar.php";
-        </script>';
+      header("Location: UMostrar.php?status=error");
     }
   }
   else{
@@ -41,20 +35,13 @@
       $query = "UPDATE Usuarios SET Usuario='$usuario', Clave=MD5('$clave') WHERE CodUsuario='$Codigo'";
       $resultado= $conexion->query($query);
       if ($resultado) {
-        header("Location: UMostrar.php");
+        header("Location: UMostrar.php?status=success");
       }else  {
-        echo'<script type="text/javascript">
-        alert("Usuario No Guardado");
-        window.location.href="UMostrar.php";
-        </script>';
-        }
-
+        header("Location: UMostrar.php?status=error");
+      }  
     }
     else {
-      echo'<script type="text/javascript">
-        alert("Persona No Guardada");
-        window.location.href="UMostrar.php";
-        </script>';
+      header("Location: UMostrar.php?status=error");
     }
   }
 ?>

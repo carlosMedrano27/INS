@@ -8,11 +8,11 @@ if(@$_SESSION['Usuario'] == ""){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One&Only</title>
+    <title>TADESA</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <link rel="icon" type="image/ico" href="img/talleres.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -65,30 +65,7 @@ if(@$_SESSION['Usuario'] == ""){
         <div class="row">
           <form method="POST" action="MoUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>&CodPersona=<?php echo $row['CodPersona']; ?>" enctype="multipart/form-data">
 
-            <div class="col-md-2">
-
-                <div class="block block-drop-shadow">
-
-                    <div class="head bg-dot30 npb">
-                        <h2>Imagen</h2>
-
-                    </div>
-                    <div class="head bg-dot30 np tac">
-                    </div>
-                    <div class="content controls">
-                        <div class="form-row">
-                            <div class="col-md-12">
-                                <div class="input-group file">
-                                    <input type="text" class="form-control" value="img/usuario.jpg"/>
-                                    <input type="file" id="imgInp" name="img"  onchange='openFile(event)' />
-                                    <span class="input-group-btn">
-                                        <button class="btn" type="button">Buscar</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                </div>
+            <div class="col-md-">
             </div>
 
             <div class="col-md-6">
