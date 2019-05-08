@@ -8,11 +8,11 @@ if(@$_SESSION['Usuario'] == ""){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One&Only</title>
+    <title>TADESA</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+    <link rel="icon" type="image/ico" href="img/talleres.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
 
@@ -52,44 +52,7 @@ include 'Nav.php';
 
           <form method="POST" action="guardar.php" enctype="multipart/form-data">
 
-            <div class="col-md-2">
-
-                <div class="block block-drop-shadow">
-
-                    <div class="head bg-dot30 npb">
-                        <h2>Imagen</h2>
-
-                    </div>
-                    <div class="head bg-dot30 np tac">
-                        <img src="img/usuario.jpg" id="imagen" class="img-rounded" width="100px" height="100px"/>
-                        <script>
-                        var openFile = function(event) {
-                          var input = event.target;
-
-                          var reader = new FileReader();
-                          reader.onload = function(){
-                            var dataURL = reader.result;
-                            var output = document.getElementById('imagen');
-                            output.src = dataURL;
-                          };
-                          reader.readAsDataURL(input.files[0]);
-                        };
-                        </script>
-                    </div>
-                    <div class="content controls">
-                        <div class="form-row">
-                            <div class="col-md-12">
-                                <div class="input-group file">
-                                    <input type="text" class="form-control" value="img/usuario.jpg"/>
-                                    <input type="file" id="imgInp" name="img"  onchange='openFile(event)' />
-                                    <span class="input-group-btn">
-                                        <button class="btn" type="button">Buscar</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                </div>
+            <div class="col-md-1">
             </div>
 
             <div class="col-md-8">
@@ -137,7 +100,30 @@ include 'Nav.php';
                                 <input type="text" name="codigo" placeholder="Ingresar correo">
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Pais:
+                            </div>
+                            <div class="col-md-9">
+                                <select class="form-control" id="Pais" name="Pais">
+			                        <option>-Selecciona Pais-</option>
+			                        <?php
+                                    include('conexion.php');
+                                    if (mysqli_connect_errno())
+                                        {
+                                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                                        }
+                                    $query = "SELECT * FROM Paises";
+                                    $result = mysqli_query($conexion, $query);
 
+                                    while($row = mysqli_fetch_array($result))
+                                    {
+                                        echo '<option value="' .$row["CodPais"]. '">' .$row["Pais"]. '</option>';
+                                    }
+                                    mysqli_close($conexion);
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
                         <div class="tar">
                         <button class="btn btn-default btn-clean">Guardar</button>
                     </div>
