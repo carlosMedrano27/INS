@@ -65,18 +65,6 @@ include 'Nav.php';
 
                       <div class="content controls">
                         <div class="form-row">
-                            <div class="col-md-3">Usuario:</div>
-                            <div class="col-md-9">
-                                <input type="text" name="usuario" placeholder="Ingresar Usuario">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-3">Contraseña</div>
-                            <div class="col-md-9">
-                                <input type="password" name="clave"  placeholder="Ingresar contraseña">
-                            </div>
-                        </div>
-                        <div class="form-row">
                             <div class="col-md-3">Nombre</div>
                             <div class="col-md-9">
                                 <input type="text" name="nombre" placeholder="Ingresar Nombre">
@@ -95,9 +83,15 @@ include 'Nav.php';
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-md-3">Codigo:</div>
+                            <div class="col-md-3">Nit:</div>
                             <div class="col-md-9">
-                                <input type="text" name="codigo" placeholder="Ingresar correo">
+                                <input type="text" name="nit" placeholder="Ingresar Nit">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Telefono:</div>
+                            <div class="col-md-9">
+                                <input type="text" name="telefono" placeholder="Ingresar Telefono">
                             </div>
                         </div>
                         <div class="form-row">
@@ -108,10 +102,6 @@ include 'Nav.php';
 			                        <option>-Selecciona Pais-</option>
 			                        <?php
                                     include('conexion.php');
-                                    if (mysqli_connect_errno())
-                                        {
-                                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                                        }
                                     $query = "SELECT * FROM Paises";
                                     $result = mysqli_query($conexion, $query);
 
@@ -122,6 +112,18 @@ include 'Nav.php';
                                     mysqli_close($conexion);
                                     ?>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Usuario:</div>
+                            <div class="col-md-9">
+                                <input type="text" name="usuario" placeholder="Ingresar Usuario">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Contraseña</div>
+                            <div class="col-md-9">
+                                <input type="password" name="clave"  placeholder="Ingresar contraseña">
                             </div>
                         </div>
                         <div class="tar">
@@ -138,5 +140,5 @@ include 'Nav.php';
 </body>
 </html>
 <?php
-  }
+}
 ?>
