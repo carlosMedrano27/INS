@@ -2,7 +2,7 @@
   include ("conexion.php");
   $nombre= $_POST ['nombre'];
   $apellido= $_POST ['apellido'];
-  $correo=$_POST['correo'];
+  $correo=$_POST['email'];
   $usuario= $_POST ['usuario'];
   $clave= $_POST ['clave'];
   $nit= $_POST['nit'];
@@ -23,11 +23,17 @@
       if ($resultado) {
         header("Location: UMostrar.php?status=success");
       }else{
-        header("Location: UMostrar.php?status=error");
+        echo'<script type="text/javascript">
+        alert("'.mysqli_error($conexion).'");
+        window.location.href="Registro.php";
+        </script>';
       }
     }
   }
   else {
-    header("Location: UMostrar.php?status=error");
+    echo'<script type="text/javascript">
+    alert("'.mysqli_error($conexion).'");
+    window.location.href="Registro.php";
+    </script>';
   }
 ?>

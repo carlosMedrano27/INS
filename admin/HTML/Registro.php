@@ -17,17 +17,27 @@ if(@$_SESSION['Usuario'] == ""){
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
 
     <script type='text/javascript' src='js/plugins/jquery/jquery.min.js'></script>
-    <script type='text/javascript' src='js/plugins/jquery/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/jquery-ui.min.js'></script>   
     <script type='text/javascript' src='js/plugins/jquery/jquery-migrate.min.js'></script>
-    <script type='text/javascript' src='js/plugins/jquery/globalize.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/globalize.js'></script>    
     <script type='text/javascript' src='js/plugins/bootstrap/bootstrap.min.js'></script>
-
+    
     <script type='text/javascript' src='js/plugins/uniform/jquery.uniform.min.js'></script>
-    <script type='text/javascript' src='js/plugins/datatables/jquery.dataTables.min.js'></script>
-
-    <script type='text/javascript' src='js/plugins.js'></script>
+    <script type='text/javascript' src='js/plugins/select2/select2.min.js'></script>
+    <script type='text/javascript' src='js/plugins/tagsinput/jquery.tagsinput.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/jquery-ui-timepicker-addon.js'></script>
+    <script type='text/javascript' src='js/plugins/ibutton/jquery.ibutton.js'></script>
+    
+    <script type='text/javascript' src='js/plugins/validationengine/languages/jquery.validationEngine-en.js'></script>
+    <script type='text/javascript' src='js/plugins/validationengine/jquery.validationEngine.js'></script>
+    
+    <script type='text/javascript' src='js/plugins/maskedinput/jquery.maskedinput.min.js'></script>    
+    <script type='text/javascript' src='js/plugins/stepy/jquery.stepy.min.js'></script>    
+    
+    <script type='text/javascript' src='js/plugins.js'></script>    
     <script type='text/javascript' src='js/actions.js'></script>
     <script type='text/javascript' src='js/settings.js'></script>
+
 </head>
 <body class="bg-img-num1">
 <?php
@@ -43,15 +53,12 @@ include 'Nav.php';
             </div>
         </div>
       <div class="row">
-        <div class="col-md-2">
+          <form method="POST" action="guardar.php" enctype="multipart/form-data" id="wizard_validate"> 
+          <div class="col-md-2">
         <?php
         include("Lateral.php")
         ?>
-        </div>
-
-
-          <form method="POST" action="guardar.php" enctype="multipart/form-data">
-
+        </div>    
             <div class="col-md-1">
             </div>
 
@@ -67,39 +74,38 @@ include 'Nav.php';
                         <div class="form-row">
                             <div class="col-md-3">Nombre</div>
                             <div class="col-md-9">
-                                <input type="text" name="nombre" placeholder="Ingresar Nombre">
+                                <input type="text" name="nombre" placeholder="Ingresar Nombre" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-3">Apellido</div>
                             <div class="col-md-9">
-                                <input type="text" name="apellido" placeholder="Ingresar Apellido">
+                                <input type="text" name="apellido" placeholder="Ingresar Apellido" required>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-md-3">Correo:</div>
-                            <div class="col-md-9">
-                                <input type="text" name="correo" placeholder="Ingresar correo">
-                            </div>
-                        </div>
+                                    <div class="col-md-3">E-mail:</div>
+                                    <div class="col-md-9">
+                                        <input type="text" name="email" placeholder="Ingresar Correo" class="validate[required,custom[email]]"/>
+                                    </div>
+                                </div> 
                         <div class="form-row">
                             <div class="col-md-3">Nit:</div>
                             <div class="col-md-9">
-                                <input type="text" name="nit" placeholder="Ingresar Nit">
+                                <input type="text" name="nit" placeholder="Ingresar Nit" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-3">Telefono:</div>
                             <div class="col-md-9">
-                                <input type="text" name="telefono" placeholder="Ingresar Telefono">
+                                <input type="text" name="telefono" placeholder="Ingresar Telefono" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-3">Pais:
                             </div>
                             <div class="col-md-9">
-                                <select class="form-control" id="Pais" name="Pais">
-			                        <option>-Selecciona Pais-</option>
+                                <select class="form-control" id="Pais" name="Pais" required>
 			                        <?php
                                     include('conexion.php');
                                     $query = "SELECT * FROM Paises";
@@ -117,13 +123,13 @@ include 'Nav.php';
                         <div class="form-row">
                             <div class="col-md-3">Usuario:</div>
                             <div class="col-md-9">
-                                <input type="text" name="usuario" placeholder="Ingresar Usuario">
+                                <input type="text" name="usuario" placeholder="Ingresar Usuario" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md-3">Contraseña</div>
                             <div class="col-md-9">
-                                <input type="password" name="clave"  placeholder="Ingresar contraseña">
+                                <input type="password" name="clave"  placeholder="Ingresar contraseña" class="validate[required,minSize[6],maxSize[25]]">
                             </div>
                         </div>
                         <div class="tar">
