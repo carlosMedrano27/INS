@@ -69,7 +69,7 @@
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fas fa-users"></span>Ajustes</a>
                           <ul class="dropdown-menu">
                             <li>
-                                <a href="#">Usuarios<i class="icon-angle-right pull-right"></i></a>
+                                <a href="#">Administradores<i class="icon-angle-right pull-right"></i></a>
                                 <ul class="dropdown-submenu">
                                   <li><a href="Registro.php">Registrar </a></li>
                                   <li><a href="UMostrar.php">Mostrar</a></li>
@@ -78,7 +78,6 @@
                             <li>
                                 <a href="#">Clientes<i class="icon-angle-right pull-right"></i></a>
                                 <ul class="dropdown-submenu">
-                                <li><a href="ReClientes.php">Registrar Cliente</a></li>
                                 <li><a href="CMostrar.php">Mostrar Cliente</a></li>
                                 </ul>
                             </li>

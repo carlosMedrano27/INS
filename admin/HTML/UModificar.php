@@ -40,8 +40,8 @@ if(@$_SESSION['Usuario'] == ""){
           <div class="row">
               <div class="col-md-12">
                   <ol class="breadcrumb">
-                      <li><a href="Inicio.php">Inicio</a></li>
-                      <li class="active">Modificar Usuarios</li>
+                      <li><a href="UMostrar.php.php">Mostrar Administradores</a></li>
+                      <li class="active">Modificar Usuario</li>
                   </ol>
               </div>
           </div>
@@ -58,14 +58,14 @@ if(@$_SESSION['Usuario'] == ""){
 
       $Usuario=$_REQUEST['Codigo'];
 
-      $query = "SELECT * FROM Usuarios inner join Personas on Personas.CodPersona = Usuarios.CodPersona WHERE CodUsuario ='$Usuario'";
+      $query = "SELECT * FROM Usuarios inner join Personas on Personas.CodPersona = Usuarios.CodPersona inner join Paises on Personas.CodPais = Paises.CodPais WHERE CodUsuario ='$Usuario'";
       $resultado= $conexion->query($query);
       $row = $resultado->fetch_assoc();
       ?>
         <div class="row">
           <form method="POST" action="MoUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>&CodPersona=<?php echo $row['CodPersona']; ?>" enctype="multipart/form-data">
 
-            <div class="col-md-">
+            <div class="col-md-1">
             </div>
 
             <div class="col-md-6">
@@ -77,12 +77,6 @@ if(@$_SESSION['Usuario'] == ""){
                     </div>
 
                       <div class="content controls">
-                        <div class="form-row">
-                            <div class="col-md-3">Usuario:</div>
-                            <div class="col-md-9">
-                                <input type="text" name="usuario" value="<?php echo $row['Usuario']; ?>">
-                            </div>
-                        </div>
                         <div class="form-row">
                             <div class="col-md-3">Nombre</div>
                             <div class="col-md-9">
@@ -96,18 +90,53 @@ if(@$_SESSION['Usuario'] == ""){
                             </div>
                         </div>
                         <div class="form-row">
+                            <div class="col-md-3">Correo:</div>
+                            <div class="col-md-9">
+                                <input type="text" name="email" value="<?php echo $row['Correo']; ?>">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Nit:</div>
+                            <div class="col-md-9">
+                                <input type="text" name="nit" placeholder="Ingresar Nit"  value="<?php echo $row['Nit']; ?>">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Telefono:</div>
+                            <div class="col-md-9">
+                                <input type="text" name="telefono"  value="<?php echo $row['Telefono']; ?>" placeholder="Ingresar Telefono" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Pais:</div>
+                            <div class="col-md-9">
+                                <select class="form-control" id="pais" required name="pais">
+                                <option value="<?php echo $row['CodPais']; ?>"><?php echo $row['Pais']; ?></option>
+                                <?php
+                                    $query = "SELECT * FROM Paises";
+                                    $result = mysqli_query($conexion, $query);
+
+                                    while($pais = mysqli_fetch_array($result))
+                                    {
+                                        echo '<option value="' .$pais["CodPais"]. '">' .$pais["Pais"]. '</option>';
+                                    }
+                                    mysqli_close($conexion);
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Usuario:</div>
+                            <div class="col-md-9">
+                                <input type="text" name="usuario" value="<?php echo $row['Usuario']; ?>">
+                            </div>
+                        </div>
+                        <div class="form-row">
                             <div class="col-md-3">Contraseña:</div>
                             <div class="col-md-9">
                                 <input type="password" name="clave" value="*********">
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-md-3">Correo:</div>
-                            <div class="col-md-9">
-                                <input type="text" name="correo" value="<?php echo $row['Correo']; ?>">
-                            </div>
-                        </div>
-
                         <div class="tar">
                         <button class="btn btn-default btn-clean">Guardar</button>
                     </div>

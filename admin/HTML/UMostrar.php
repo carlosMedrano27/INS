@@ -73,19 +73,21 @@ include 'Nav.php';
                         <table class="table table-sorting table-striped table-hover datatable" id="resultados">
                             <thead>
                                 <tr>
-                                    <th width="15%">Usuario</th>
-                                    <th width="25%">Nombre</th>
-                                    <th width="25%">Apellido</th>
-                                    <th width="25%">Correo</th>
-                                    <th width="10%">Modificar</th>
-                                    <th width="10%">Eliminar</th>
+                                    <th width="5%">Usuario</th>
+                                    <th width="15%">Nombre</th>
+                                    <th width="15%">Apellido</th>
+                                    <th width="15%">Correo</th>
+                                    <th width="15%">Telefono</th>
+                                    <th width="15%">Pais</th>
+                                    <th width="5%">Modificar</th>
+                                    <th width="5%">Eliminar</th>
                                 </tr>
                             </thead>
                             <tbody>
                               <?php
                               $Codigo=@$_SESSION['Codigo'];
                               include("conexion.php");
-                              $query="SELECT*FROM Usuarios inner join Personas on Usuarios.CodPersona = Personas.CodPersona WHERE Tipo=1";
+                              $query="SELECT*FROM Usuarios inner join Personas on Usuarios.CodPersona = Personas.CodPersona inner join Paises on Personas.CodPais = Paises.CodPais WHERE Tipo=1";
                               $resultado= $conexion->query($query);
                               while ($row = $resultado->fetch_assoc()){
                               ?>
@@ -94,7 +96,8 @@ include 'Nav.php';
                                     <td><?php echo $row['Nombre']; ?></td>
                                     <td><?php echo $row['Apellido']; ?></td>
                                     <td><?php echo $row['Correo']; ?></td>
-                                  <td><center><a href="UModificar.php?Codigo=<?php echo $row['CodUsuario']; ?>"><button type="button" class="btn btn-info btn-xs">
+                                    <td><?php echo $row['Telefono']; ?></td>
+                                    <td><?php echo $row['Pais']; ?></td>                                  <td><center><a href="UModificar.php?Codigo=<?php echo $row['CodUsuario']; ?>"><button type="button" class="btn btn-info btn-xs">
                       								<span class="glyphicon icon-pencil icon-2x"></span></button></a></center></td>
         						              <td><center><a href="ElUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>" type="button" class="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este usuario?');"><button type="button" class="btn btn-danger btn-xs">
                       								<span class="glyphicon icon-remove icon-2x"></span></button></a></center></td>

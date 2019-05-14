@@ -84,7 +84,7 @@ include 'Nav.php';
                             </div>
                         </div>
                         <div class="form-row">
-                                    <div class="col-md-3">E-mail:</div>
+                                    <div class="col-md-3">Correo:</div>
                                     <div class="col-md-9">
                                         <input type="text" name="email" placeholder="Ingresar Correo" class="validate[required,custom[email]]"/>
                                     </div>

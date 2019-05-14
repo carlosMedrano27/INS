@@ -4,16 +4,23 @@
   $CodPersona=$_REQUEST['CodPersona'];
   $nombre= $_POST ['nombre'];
   $apellido= $_POST ['apellido'];
-  $correo=$_POST['correo'];
+  $correo=$_POST['email'];
   $usuario= $_POST ['usuario'];
   $clave= $_POST ['clave'];
+  $nit= $_POST['nit'];
+  $telefono=$_POST ["telefono"];
+  $codPais=$_POST["pais"];
 
-  if ($clave=="*********") {
-    $query="UPDATE Personas SET Nombre='$nombre',Apellido='$apellido',Correo='$correo' WHERE CodPersona ='$CodPersona'";
+  
+    $query="UPDATE Personas SET Nombre='$nombre',Apellido='$apellido',Correo='$correo','Nit='$nit,'Telefono='$telefono,'CodPais='$codPais WHERE CodPersona ='$CodPersona'";
     $resultado= $conexion->query($query);
     
     if ($resultado) {
-      $query = "UPDATE Usuarios SET Usuario='$usuario' WHERE CodUsuario='$Codigo'";
+      if ($clave=="*********") {
+        $query = "UPDATE Usuarios SET Usuario='$usuario' WHERE CodUsuario='$Codigo'";
+      }else{
+        $query = "UPDATE Usuarios SET Usuario='$usuario', Clave=MD5('$clave') WHERE CodUsuario='$Codigo'";
+      }
       $resultado= $conexion->query($query);
       if ($resultado) {
         header("Location: UMostrar.php?status=success");
@@ -25,23 +32,4 @@
     else {
       header("Location: UMostrar.php?status=error");
     }
-  }
-  else{
-    $query="UPDATE Personas SET Nombre='$nombre',Apellido='$apellido',Correo='$correo' WHERE CodPersona ='$CodPersona'";
-    $resultado= $conexion->query($query);
-    
-    
-    if ($resultado) {
-      $query = "UPDATE Usuarios SET Usuario='$usuario', Clave=MD5('$clave') WHERE CodUsuario='$Codigo'";
-      $resultado= $conexion->query($query);
-      if ($resultado) {
-        header("Location: UMostrar.php?status=success");
-      }else  {
-        header("Location: UMostrar.php?status=error");
-      }  
-    }
-    else {
-      header("Location: UMostrar.php?status=error");
-    }
-  }
 ?>
