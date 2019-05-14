@@ -1,15 +1,30 @@
 <?php
   include ("conexion.php");
   $cod=$_REQUEST['Codigo'];
+  $codPersona=$_REQUEST['CodPersona'];
 
-  $query="DELETE FROM usuario WHERE Codigo ='$cod'";
+  $query="UPDATE Personas SET Estado='D' WHERE CodPersona ='$CodPersona'";
   $resultado= $conexion->query($query);
-
   if ($resultado) {
-    header("Location: UMostrar.php");
-
+      $query1 = "UPDATE Usuarios SET Estado='D' WHERE CodUsuario='$Codigo'";
+    $resultado= $conexion->query($query1);
+    if ($resultado) {
+      echo'<script type="text/javascript">
+        alert("Usuario eliminado correctamente");
+        window.location.href="Inicio.php";
+        </script>';
+    }else  {
+      echo'<script type="text/javascript">
+        alert("'.mysqli_error($conexion).'");
+        window.location.href="Inicio.php";
+        </script>';
+      }
   }
-else {
-  echo "no se elimino";
-}
+  else {
+    echo'<script type="text/javascript">
+        alert("'.mysqli_error($conexion).'");
+        window.location.href="Inicio.php";
+        </script>';
+  }
+
  ?>

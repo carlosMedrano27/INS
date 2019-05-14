@@ -97,10 +97,11 @@ include 'Nav.php';
                                     <td><?php echo $row['Apellido']; ?></td>
                                     <td><?php echo $row['Correo']; ?></td>
                                     <td><?php echo $row['Telefono']; ?></td>
-                                    <td><?php echo $row['Pais']; ?></td>                                  <td><center><a href="UModificar.php?Codigo=<?php echo $row['CodUsuario']; ?>"><button type="button" class="btn btn-info btn-xs">
-                      								<span class="glyphicon icon-pencil icon-2x"></span></button></a></center></td>
-        						              <td><center><a href="ElUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>" type="button" class="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este usuario?');"><button type="button" class="btn btn-danger btn-xs">
-                      								<span class="glyphicon icon-remove icon-2x"></span></button></a></center></td>
+                                    <td><?php echo $row['Pais']; ?></td>    
+                                    <td><center><a href="UModificar.php?Codigo=<?php echo $row['CodUsuario']; ?>"><button type="button" class="btn btn-info btn-xs">
+                                        <span class="glyphicon icon-pencil icon-2x"></span></button></a></center></td>
+                                    <td><center><a href="ElUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>&CodPersona=<?php echo $row['CodPersona']; ?>" type="button" class="button" onclick="return confirm('¿Estás seguro de que quieres eliminar este usuario?');"><button type="button" class="btn btn-danger btn-xs">
+                    					<span class="glyphicon icon-remove icon-2x"></span></button></a></center></td>
                                   </tr>
                                 <?php
                                 }

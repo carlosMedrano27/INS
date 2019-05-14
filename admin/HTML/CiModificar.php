@@ -9,11 +9,11 @@ if(@$_SESSION['Usuario'] == ""){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>One&Only</title>
+    <title>TADESA</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="icon" type="image/ico" href="img/icono.ico"/>
+    <link rel="icon" type="image/ico" href="img/talleres.ico"/>
 
     <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -39,8 +39,8 @@ include 'Nav.php';
         <div class="row">
             <div class="col-md-12">
                 <ol class="breadcrumb">
-                    <li><a href="Inicio.php">Inicio</a></li>
-                    <li class="active">Registrar Clientes</li>
+                    <li><a href="CMostrar.php">Mostrar Clientes</a></li>
+                    <li class="active">Modificar Cliente</li>
                 </ol>
             </div>
         </div>
@@ -54,63 +54,89 @@ include 'Nav.php';
         include("conexion.php");
 
         $cod=$_REQUEST['Codigo'];
-        $query = "SELECT * FROM Usuarios inner join Personas on Personas.CodPersona = Usuarios.CodPersona WHERE CodUsuario ='$cod'";
+        $query = "SELECT * FROM Usuarios inner join Personas on Personas.CodPersona = Usuarios.CodPersona inner join Paises on Personas.CodPais = Paises.CodPais WHERE CodUsuario ='$cod'";
         $resultado= $conexion->query($query);
         $row = $resultado->fetch_assoc();
         ?>
-          <form method="POST" action="MoClientes.php?Codigo=<?php echo $row['CodUsuario']; ?>" enctype="multipart/form-data">
+          <form method="POST" action="MoUsuario.php?Codigo=<?php echo $row['CodUsuario']; ?>&CodPersona=<?php echo $row['CodPersona']; ?>" enctype="multipart/form-data">
 
-            <div class="col-md-8">
+<div class="col-md-1">
+</div>
 
-                <div class="block block-drop-shadow">
+<div class="col-md-6">
 
-                    <div class="header">
-                        <h2>Modificar Cliente</h2>
-                    </div>
-                    <form method="post" action="insertar.php">
-                        <div class="content controls">
-                        <div class="form-row">
-                            <div class="col-md-3">Usuario:</div>
-                            <div class="col-md-9">
-                                <input type="text" name="usuario" value="<?php echo $row['Usuario']; ?>" placeholder="Ingresar Usuario">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-3">Contraseña</div>
-                            <div class="col-md-9">
-                                <input type="password" name="clave"  value="<?php echo $row['Clave']; ?>" placeholder="Ingresar contraseña">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-3">Nombre</div>
-                            <div class="col-md-9">
-                                <input type="text" name="nombre" value="<?php echo $row['Nombre']; ?>" placeholder="Ingresar Nombre">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-3">Apellido</div>
-                            <div class="col-md-9">
-                                <input type="text" name="apellido" value="<?php echo $row['Apellido']; ?>" placeholder="Ingresar Apellido">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-3">Correo:</div>
-                            <div class="col-md-9">
-                                <input type="text" name="correo" value="<?php echo $row['Correo']; ?>" placeholder="Ingresar Correo">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-3">Teléfono:</div>
-                            <div class="col-md-9">
-                                <input type="text" name="telefono" value="<?php echo $row['Telefono']; ?>" placeholder="Ingresar Teléfono">
-                            </div>
-                        </div>
-                        <div class="tar">
-                        <button class="btn btn-default btn-clean">Guardar</button>
-                    </div>
+    <div class="block block-drop-shadow">
+
+        <div class="header">
+            <h2>Modificar Cliente</h2>
+        </div>
+
+          <div class="content controls">
+            <div class="form-row">
+                <div class="col-md-3">Nombre</div>
+                <div class="col-md-9">
+                    <input type="text" name="nombre" value="<?php echo $row['Nombre']; ?>">
                 </div>
-                    </form>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3">Apellido</div>
+                <div class="col-md-9">
+                    <input type="text" name="apellido"value="<?php echo $row['Apellido']; ?>">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3">Correo:</div>
+                <div class="col-md-9">
+                    <input type="text" name="email" value="<?php echo $row['Correo']; ?>">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3">Nit:</div>
+                <div class="col-md-9">
+                    <input type="text" name="nit" placeholder="Ingresar Nit"  value="<?php echo $row['Nit']; ?>">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3">Telefono:</div>
+                <div class="col-md-9">
+                    <input type="text" name="telefono"  value="<?php echo $row['Telefono']; ?>" placeholder="Ingresar Telefono" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3">Pais:</div>
+                <div class="col-md-9">
+                    <select class="form-control" id="pais" required name="pais">
+                    <option value="<?php echo $row['CodPais']; ?>"><?php echo $row['Pais']; ?></option>
+                    <?php
+                        $query = "SELECT * FROM Paises";
+                        $result = mysqli_query($conexion, $query);
 
+                        while($pais = mysqli_fetch_array($result))
+                        {
+                            echo '<option value="' .$pais["CodPais"]. '">' .$pais["Pais"]. '</option>';
+                        }
+                        mysqli_close($conexion);
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3">Usuario:</div>
+                <div class="col-md-9">
+                    <input type="text" name="usuario" value="<?php echo $row['Usuario']; ?>">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3">Contraseña:</div>
+                <div class="col-md-9">
+                    <input type="password" name="clave" value="*********">
+                </div>
+            </div>
+            <div class="tar">
+            <button class="btn btn-default btn-clean">Guardar</button>
+        </div>
+    </div>
+        </form>
                     </div>
                 </div>
            </div>
