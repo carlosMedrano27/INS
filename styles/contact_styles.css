@@ -330,13 +330,13 @@ section
 	left: 0;
 	width: 100%;
 	height: 128px;
-	background: rgba(27, 11, 51, 0.52);
+	background:  rgba(0, 0, 0, 0.52);
 	z-index: 10;
 }
 .header.scrolled
 {
 	height: 80px;
-	background: rgba(27, 11, 51, 0.92);
+	background:  rgba(0, 0, 0, 0.52);
 }
 
 /*********************************
@@ -718,7 +718,7 @@ section
 	height: 45px;
 	border: none;
 	border-bottom: solid 1px #e1e1e1;
-	color: #452b78;
+	color:  #cc0c0c;
 }
 
 .input_field::-webkit-input-placeholder,
@@ -766,27 +766,27 @@ section
 .input_field:focus::-webkit-input-placeholder,
 .text_field:focus::-webkit-input-placeholder
 {
-	color: #452b78 !important;
+	color:  #cc0c0c !important;
 }
 .input_field:focus:-moz-placeholder,
 .text_field:focus:-moz-placeholder
 {
-	color: #452b78 !important;
+	color:  #cc0c0c !important;
 }
 .input_field:focus::-moz-placeholder,
 .text_field:focus::-moz-placeholder
 {
-	color: #452b78 !important;
+	color:  #cc0c0c !important;
 } 
 .input_field:focus:-ms-input-placeholder,
 .text_field:focus:-ms-input-placeholder
 { 
-	color: #452b78 !important;
+	color:  #cc0c0c !important;
 }
 .input_field:focus::input-placeholder,
 .text_field:focus::input-placeholder
 {
-	color: #452b78 !important;
+	color:  #cc0c0c !important;
 }
 .text_field
 {
@@ -794,7 +794,7 @@ section
 	border: none;
 	border-bottom: solid 1px #e1e1e1;
 	margin-bottom: 12px;
-	color: #452b78;
+	color: #cc0c0c;
 }
 .reply_form_name,
 .reply_form_email
@@ -826,7 +826,7 @@ section
 .input_field:focus,
 .text_field:focus
 {
-	border-bottom: solid 1px #452b78 !important;
+	border-bottom: solid 1px  #cc0c0c !important;
 	box-shadow: none !important;
 	outline: none !important;
 }
@@ -837,19 +837,19 @@ section
 	height: 54px;
 	width: 174px;
 	text-align: center;
-	border: solid 2px #452b78;
+	border: solid 2px #cc0c0c;
 	background: transparent;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 50px;
 	text-transform: uppercase;
-	color: #452b78;
+	color: #cc0c0c;
 	cursor: pointer;
 }
 .reply_submit_btn:hover
 {
-	background: #452b78;
+	background:  #cc0c0c;
 	color: #FFFFFF;
 }
 
@@ -869,7 +869,7 @@ section
 }
 .contact_logo a
 {
-	color: #452b78;
+	color: #cc0c0c;
 	line-height: 1;
 }
 .contact_info_container p
@@ -894,7 +894,7 @@ section
 	height: 33px;
 	color: #FFFFFF;
 	font-size: 18px;
-	background: #452b78;
+	background: #cc0c0c;
 	border-radius: 50%;
 	float: left;
 }
@@ -937,7 +937,7 @@ section
 }
 .footer_logo a
 {
-	color: #452b78;
+	color: #cc0c0c;
 	line-height: 1;
 }
 .footer_intro p

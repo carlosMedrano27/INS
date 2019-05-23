@@ -4,8 +4,8 @@
 <title>TADESA</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="RanGO Project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TADESA Project">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
@@ -15,6 +15,7 @@
 <link href="plugins/icon-font/styles.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+
 </head>
 
 <body>
@@ -30,30 +31,24 @@
 			<img src="images/talleres.png" width="100" height="100"> 
 		</div>
 
-		<!-- Navigation -->
-		<nav class="main_nav justify-self-end text-right">
-			<ul>
-				
-				
-				<body>
-				
-				<div class="super_container">
-				<li class="active"><a href="#">Inicio</a></li>
-				<li><a href="about.php">Quiénes somos</a></li>
-				<li><a href="places.php">Instalaciones</a></li>			
-				<li><a href="contributions.php">Donaciones</a></li>
-				<li><a href="contact.php">Contáctanos</a></li>
-			</ul>
-			
-		<!-- Hamburger -->
-		<div class="hamburger_container bez_1">
-			<i class="fas fa-bars trans_200"></i>
-		</div>
-		
-	</header>
+	        <!-- Navigation -->
+			<nav class="main_nav justify-self-end text-right">
+            <ul>
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="about.php">Quiénes somos</a></li>
+                <li><a href="places.php">Instalaciones</a></li>         
+                <li><a href="contributions.php">Donaciones</a></li>
+                <li><a href="contact.php">Contáctanos</a></li>
+            </ul>
+			</nav>
+        <!-- Hamburger -->
+        <div class="hamburger_container bez_1">
+            <i class="fas fa-bars trans_200"></i>
+        </div>
+
+		</header>
 
 	<!-- Menu -->
-
 	<div class="menu_container">
 		<div class="menu menu_mm text-right">
 			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
@@ -78,34 +73,19 @@
 		<div class="hero_slider_container">
 			
 			<!-- Slider -->
-			<div class="owl-carousel owl-theme hero_slider" style="background-image:url(images/slider_background.jpg)">
+			<div class="owl-carousel owl-theme hero_slider"  style="background-image:url(images/slider_background.jpg)">
 
 				<!-- Slider Item -->
-				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>by</span>
-					<span><img src="images/colorlib.png" alt=""></span>
+				<div class="owl-item hero_slider_item d-flex flex-column">
+					<div class="centrado"><br><br><br><br>
+					<span ><img src="images/portfolio_5.jpg" height="100" width="100"></span>
 					<span>GO!</span>
-					<span>Get your freebie template now!</span>
-					<div><h4>Fecha</h2></div>
-					<div><h1>Titulo</h1></div>
-					<p> Parrafo revisar que quepa todo </p>
+					<span>Pruebas</span>
+					<span><h3>Fecha</h3></span>
+					<h1>Titulo</h1>
+					<p> Parrafo revisar que quepa todo </p></div>
 				</div>
 
-				<!-- Slider Item -->
-				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>by</span>
-					<span><img src="images/colorlib.png" alt=""></span>
-					<span>GO!</span>
-					<span>Get your freebie template now!</span>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>by</span>
-					<span><img src="images/colorlib.png" alt=""></span>
-					<span>GO!</span>
-					<span>Get your freebie template now!</span>
-				</div>
 
 			</div>
 			
@@ -148,7 +128,7 @@
 
 						<!-- Logo -->
 						<div class="logo footer_logo">
-							<a href="#">Tadesa</span></a>
+							<a href="#">Tadesa</a>
 						</div>
 
 						<p>Talleres deportivos TADESA por un mejor El Salvador.</p>
@@ -211,6 +191,7 @@
 <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/custom.js"></script>
+
 </body>
 
 </html>

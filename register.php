@@ -1,23 +1,22 @@
+<?php
+	require ('conexion.php');
+	
+	$query = "SELECT CodPais, Pais FROM Paises";
+	$resultado=$conexion->query($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>TADESA - Instalaciones</title>
+<title>TADESA - Donaciones</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="RanGO Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
-<link rel="stylesheet" type="text/css" href="styles/services_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/services_responsive.css">
-<link rel="stylesheet" type="text/css" href="styles/slicebox.css" />
-<link rel="stylesheet" type="text/css" href="styles/demo.css" />
-<link rel="stylesheet" type="text/css" href="styles/custom.css" />
-<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/portfolio_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/portfolio_responsive.css">
 </head>
 
 <body>
@@ -40,13 +39,12 @@
 					<div class="super_container">
 					<li><a href="index.php">Inicio</a></li>
 					<li><a href="about.php">Quiénes somos</a></li>
-					<li class="active"><a href="#">Instalaciones</a></li>			
-					<li><a href="contributions.php">Donaciones</a></li>
+					<li><a href="places.php">Instalaciones</a></li>	
+					<li><a href="contributions.php">Donaciones</a></li>		
 					<li><a href="contact.php">Contáctanos</a></li>
 				</ul>
 </nav>
 			
-
 		<!-- Hamburger -->
 		<div class="hamburger_container bez_1">
 			<i class="fas fa-bars trans_200"></i>
@@ -55,19 +53,18 @@
 	</header>
 
 	<!-- Menu -->
-
-	<div class="menu_container">
-		<div class="menu menu_mm text-right">
-			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
-			<ul class="menu_mm">
-				<li class="menu_mm"><a href="index.php">Inicio</a></li>
-				<li class="menu_mm"><a href="about.php">Quiénes somos</a></li>
-				<li class="menu_mm active"><a href="#">Instalaciones</a></li>
-				<li class="menu_mm"><a href="contributions.php">Donaciones</a></li>
-				<li class="menu_mm"><a href="contact.php">Contáctanos</a></li>
-			</ul>
-		</div>
-	</div>
+    <div class="menu_container">
+        <div class="menu menu_mm text-right">
+            <div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
+            <ul class="menu_mm">
+                <li class="menu_mm"><a href="index.php">Inicio</a></li>
+                <li class="menu_mm"><a href="about.php">Quiénes somos</a></li>
+                <li class="menu_mm"><a href="places.php">Instalaciones</a></li>
+                <li class="menu_mm"><a href="contributions.php">Donaciones</a></li>
+                <li class="menu_mm"><a href="contact.php">Contáctanos</a></li>
+            </ul>
+        </div>
+    </div>
 
 	<!-- Home -->
 
@@ -77,48 +74,59 @@
 		</div>
 		
 		<div class="home_title">
-			<h2>Instalaciones</h2>
+			<h2>Donaciones</h2>
 			<div class="next_section_scroll">
-				<div class="next_section nav_links" data-scroll-to=".service_boxes">
+				<div class="next_section nav_links" data-scroll-to=".portfolio">
 					<i class="fas fa-chevron-down trans_200"></i>
 					<i class="fas fa-chevron-down trans_200"></i>
 				</div>
 			</div>
 		</div>
-	
 	</div>
 
-	<!-- Wrapper -->
-	<div class="wrapper">
+<!-- Portfolio Vergas -->
+	<div class="row">
+				<div class="col">
+					
+					<div class="portfolio_items product-grid">
 
-				<ul id="sb-slider" class="sb-slider">
-					<li>
-						<a><img src="images/instalacion1.jpg"/></a>
-						<div class="sb-description">
-							<h3>Complejo Deportivo Municipal de Santiago Texacuangos</h3>
-							<h4>Teléfono: +503 7308-8614</h4>
-							<h4>Dirección: Sede Complejo Deportivo Municipal de Santiago Texacuangos, 1 1/2 kilómetros después del casco urbano carretera panorámica.</h4>
+						<!-- Portfolio Item -->
+						<div class="card branding">
+							<div class="card-body">
+							<form  action="cregister.php" method="post" class="form-register">
+								<h2 class="form__titulo">Registrarse</h2>
+									<input name="nombre" type="text" placeholder="Nombres" required="required" data-error="Se requiere del nombre" class="input-48">
+									<input name="apellidos" type="text" placeholder="Apellidos" required="required" data-error="Se requiere del apellido." class="input-48">
+									<input name="telefono" type="text" placeholder="Teléfono" required="required" data-error="Favor dejar un número de contaco." class="input-48">
+									<input name="NIT" type="text" placeholder="NIT"  data-error="Digite el NIT si posee sin guiones." class="input-48">
+									<input name="email"  type="email" placeholder="Correo" required="required" data-error="Favor escribir un correo válido." class="input-100">
+
+									<select name="cbx_pais" id="cbx_pais" class="input-100">
+									<option value="0">Seleccionar Pais</option>
+									<?php while($row = $resultado->fetch_assoc()) { ?>
+									<option value="<?php echo $row['CodPais']; ?>"><?php echo $row['Pais']; ?></option>
+									<?php } ?>
+									</select>
+
+									<input name="usuario" type="text" placeholder="Usuario" required="required" data-error="Se requiere de un nombre de usuario" class="input-100">
+									<input name="contraseña" type="password" placeholder="Contraseña" required="required" data-error="Se requiere del una contraseña" class="input-48">
+									<input name="rpcontraseña" type="password" placeholder="Repita la contraseña" required="required" data-error="Se requiere que repita la contraseña" class="input-48">
+									<center><input type="submit" value="Registrar" class="btn-enviar"></center>
+									<p class="form__link">¿Ya tienes una cuenta? <a href="login.php">Ingresa aquí</a></p>		
+							</form>
+							</div>
+
+							<div class="card-body">
+							<center><div class="card-title">Cuentas Bancarias</div>
+								<div class="card-header">Scotiabank		-> 15-40-008198</div></center>
+								</div>
+							</div>
 						</div>
-					</li>
-					<li>
-						<a><img src="images/instalacion2.jpg"/></a>
-					</li>
-					<li>
-						<a><img src="images/instalacion3.jpg"/></a>
-					</li>
-				</ul>
-
-				<div id="shadow" class="shadow"></div>
-
-				<div id="nav-arrows" class="nav-arrows">
-					<a href="#">Next</a>
-					<a href="#">Previous</a>
+					</div>
 				</div>
-
 			</div>
 
 	<!-- Footer -->
-
 	<footer class="footer">
 			<div class="container">
 				<div class="row">
@@ -171,8 +179,8 @@
 							<ul>
 							<li><a href="index.php">Inicio</a></li>
 							<li><a href="about.php">Quiénes somos</a></li>
-							<li class="active"><a href="#">Instalaciones</a></li>								
-							<li><a href="contributions.php">Donaciones</a></li>
+							<li><a href="places.php">Instalaciones</a></li>								
+							<li  class="active"><a href="#">Donaciones</a></li>
 							<li><a href="contact.php">Contáctanos</a></li>
 							</ul>
 						</div>
@@ -188,63 +196,10 @@
 <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
 <script src="plugins/greensock/animation.gsap.min.js"></script>
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/slick-1.8.0/slick.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
-<script src="js/services_custom.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				
-				var Page = (function() {
-
-					var $navArrows = $( '#nav-arrows' ).hide(),
-						$shadow = $( '#shadow' ).hide(),
-						slicebox = $( '#sb-slider' ).slicebox( {
-							onReady : function() {
-
-								$navArrows.show();
-								$shadow.show();
-
-							},
-							orientation : 'r',
-							cuboidsRandom : true
-						} ),
-						
-						init = function() {
-
-							initEvents();
-							
-						},
-						initEvents = function() {
-
-							// add navigation events
-							$navArrows.children( ':first' ).on( 'click', function() {
-
-								slicebox.next();
-								return false;
-
-							} );
-
-							$navArrows.children( ':last' ).on( 'click', function() {
-								
-								slicebox.previous();
-								return false;
-
-							} );
-
-						};
-
-						return { init : init };
-
-				})();
-
-				Page.init();
-
-			});
-		</script>
+<script src="js/portfolio_custom.js"></script>
 </body>
 
 </html>

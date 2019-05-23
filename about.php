@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>RanGO - About</title>
+<title>TADESA - Quiénes somos</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="RanGO Project">
@@ -39,9 +39,8 @@
 					<li><a href="places.php">Instalaciones</a></li>
 					<li><a href="contributions.php">Donaciones</a></li>			
 					<li><a href="contact.php">Contáctanos</a></li>
-					
 				</ul>
-			
+</nav>
 		<!-- Hamburger -->
 		<div class="hamburger_container bez_1">
 			<i class="fas fa-bars trans_200"></i>
@@ -68,7 +67,7 @@
 
 	<div class="home">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(images/home_background.jpg)"></div>
+			<div class="home_background prlx" style="background-image:url(images/portada.jpg)"></div>
 		</div>
 		
 		<div class="home_title">
@@ -90,10 +89,9 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="icon_box_title">
-						<h1>A strong team with a strong background</h1>
-					</div>
-					<div class="button icon_box_button trans_200">
-						<a href="#" class="trans_200">discover more</a>
+						<h1>Talleres deportivos TADESA</h1>
+						<br><br>
+						<img src="images/personas.jpg" >
 					</div>
 				</div>
 
@@ -101,7 +99,10 @@
 
 					<!-- Icon Box Item -->
 					<div class="icon_box_paragraph">
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae enim enim. Sed nec dignissim purus. Praesent bibendum tristique nulla, quis fringilla mauris sagittis ut. Maecenas sit amet varius nulla. Praesent faucibus ipsum.</p>
+						<p align="justify">Organización que desarrolla la recreación y la prevención de la violencia por medio de la enseñanza y la competencia en el deporte, promoviendo el desarrollo de escuelas y academias de fútbol en El Salvador. Ambos fundadores, Oscar y Eduardo, fueron desde 1976, personas dedicadas a 
+							trabajar en Escuelas de fútbol y a formarlas Por su parte Oscar Desarrollo las inferiores del popular club salvadoreño de fútbol Luis Ángel Firpo con muchos campeonatos en su haber, la creación de la escuela Barcelona en Santiago Texacuangos y el trabajo con los equipos de diferentes
+							 Colegios de San Salvador siempre con éxitos relevantes, llegando a tener a cargo la Selección Nacional de la FESFUT, zona para central, con la que trajo torneos ganados en Guatemala, Director Técnico de Segunda División.
+						</p>
 					</div>
 
 				</div>
@@ -110,7 +111,10 @@
 
 					<!-- Icon Box Item -->
 					<div class="icon_box_paragraph">
-						<p>Si non ligula sodales vestibulum. Nam nec augue a leo ullamcorper sollicitudin. Suspendisse mattis malesuada tortor sit amet accumsan. Mauris eu elit quis enim pretium finibus. Integer tempor, augue et lacinia cursus, nisl elit elementum magna, non blandit nisi ipsum vitae nulla. </p>
+						<p align="justify">Por otra parte, Eduardo fundando la Escuela del Pericos semillero del Colegio Externado San José con muchos campeonatos, Fundando la Escuela ASODEPZA de amplia participación en los torneos infanto-juveniles de la FESFUT en todos los niveles, Un torneo a nivel nacional en Nicaragua 
+							en fútbol sala y creando la Academia de fútbol GRACE, la primera escuela de futbol sala en El Salvador en Iglesia CEFAD, Director Técnico de Segunda División en Nicaragua. En el 2005 unieron esfuerzos fundando TADESA, que desde entonces en diversas etapas han luchado por establecer fútbol
+							 de base desarrollando los propios documentos y metodología para ello marca TADESA, fruto de la experiencia de tantos años de dedicación al fútbol de ambos compañeros de ideales y sueños para el fútbol de El Salvador.		
+					</p>
 					</div>
 					
 				</div>
@@ -126,7 +130,7 @@
 
 				<div class="col-lg-6 v_slider_section_image">
 					<div class="v_slider_image">
-						<img src="images/testimonials.jpg" alt="">
+						<img src="images/prueba.png" alt="">
 					</div>
 				</div>
 
@@ -134,7 +138,7 @@
 					
 					<!-- Testimonials Slider -->
 					<div class="v_slider_title">
-						<h1>What clients say</h1>
+						<h1>Misión</h1>
 					</div>
 
 					<div class="v_slider_container">
@@ -144,212 +148,34 @@
 
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
+								<p align="justify">Organizar uno o varios Clubes Deportivos que permitan a todos sus miembros tener la oportunidad de participar en actividades que apoyen la práctica del deporte o practicando deporte.</p>
 							</div>
 
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
+								<p align="justify">Realizar las convocatorias a participar en los diferentes eventos que TADESA proponga para ingresar miembros al o los Clubes Deportivos.</p>
 							</div>
 
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
+								<br>
+								<p align="justify">Participar en competencias dentro y fuera del país que estén al alcance de TADESA, o que sean organizadas por la misma.</p>
+								<br>
 							</div>
 
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
+								
+								<p align="justify">Proporcionar la facilidad de prepararse constantemente al personal que esté encargado de desarrollar el trabajo deportivo en el o los Clubes, de acuerdo a las necesidades en cada rama y nivel respectivo.</p>
 							</div>
 
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Vertical Slider Item -->
-							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Vertical Slider Item -->
-							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
+							<p align="justify"><font size=2.5>Establecimiento de convenios con instituciones públicas y privadas de diversa índole que permitan obtener beneficios al o los Clubes y a los diferentes miembros de los mismos, siempre que estos no sean de carácter económico.</font></p>
+							
 							</div>
 
 						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Team -->
-
-	<div class="team">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1 text-lg-center text-left team_title">
-					<h1>Meet the team</h1>
-					<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.  Vestibulum est mattis effic Nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.  </p>
-				</div>
-			</div>
-			<div class="row">
-				
-				<!-- Team Item -->
-				<div class="col-xl-3 col-lg-4 offset-xl-1 team_col">
-					<div class="team_container trans_200">
-						<div class="team_member_image"><img src="images/team_1.jpg" alt=""></div>
-						<div class="team_member_content">
-							<div class="team_member_name">Maria Smith</div>
-							<div class="team_member_title">Manager</div>
-							<p>Ipsum dolor sit amet, conse ctetur adipiscing elit. Integ er sed dui eget lorem tinc idunt...</p>
-							<div class="team_member_link"><a href="#">read more</a></div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Team Item -->
-				<div class="col-xl-3 col-lg-4 offset-xl-1 team_col">
-					<div class="team_container trans_200">
-						<div class="team_member_image"><img src="images/team_2.jpg" alt=""></div>
-						<div class="team_member_content">
-							<div class="team_member_name">Jason Jones</div>
-							<div class="team_member_title">Developer</div>
-							<p>Ipsum dolor sit amet, conse ctetur adipiscing elit. Integ er sed dui eget lorem tinc idunt...</p>
-							<div class="team_member_link"><a href="#">read more</a></div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Team Item -->
-				<div class="col-xl-3 col-lg-4 offset-xl-1 team_col">
-					<div class="team_container trans_200">
-						<div class="team_member_image"><img src="images/team_3.jpg" alt=""></div>
-						<div class="team_member_content">
-							<div class="team_member_name">Jack Williams</div>
-							<div class="team_member_title">Designer</div>
-							<p>Ipsum dolor sit amet, conse ctetur adipiscing elit. Integ er sed dui eget lorem tinc idunt...</p>
-							<div class="team_member_link"><a href="#">read more</a></div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Clients -->
-
-	<div class="clients">
-		<!-- Clients Slider -->
-
-		<div class="clients_slider_container">
-			<div class="owl-carousel owl-theme clients_slider">
-
-				<!-- Slider Item -->
-				<div class="owl-item clients_item">
-					<div class="client_item_background trans_200">
-						<img src="images/client_1.png" alt="">
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item clients_item">
-					<div class="client_item_background trans_200">
-						<img src="images/client_2.png" alt="">
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item clients_item">
-					<div class="client_item_background trans_200">
-						<img src="images/client_3.png" alt="">
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item clients_item">
-					<div class="client_item_background trans_200">
-						<img src="images/client_4.png" alt="">
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item clients_item">
-					<div class="client_item_background trans_200">
-						<img src="images/client_5.png" alt="">
 					</div>
 				</div>
 
@@ -370,7 +196,7 @@
 	
 							<!-- Logo -->
 							<div class="logo footer_logo">
-								<a href="#">Tadesa</span></a>
+								<a href="#">Tadesa</a>
 							</div>
 	
 							<p>Talleres deportivos TADESA por un mejor El Salvador.</p>
