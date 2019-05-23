@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>RanGO - Contact</title>
+<title>TADESA - Contáctanos</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="RanGO Project">
@@ -37,7 +37,7 @@
 					<li><a href="contributions.php">Donaciones</a></li>
 					<li class="active"><a href="#">Contáctanos</a></li>
 				</ul>
-			
+				</nav>
 
 		<!-- Hamburger -->
 		<div class="hamburger_container bez_1">
@@ -65,11 +65,11 @@
 
 	<div class="home">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(images/blog_background.jpg)"></div>
+			<div class="home_background prlx" style="background-image:url(images/portada.jpg)"></div>
 		</div>
 		
 		<div class="home_title">
-			<h2>Contact</h2>
+			<h2>Contáctanos</h2>
 			<div class="next_section_scroll">
 				<div class="next_section nav_links" data-scroll-to=".contact">
 					<i class="fas fa-chevron-down trans_200"></i>
@@ -92,7 +92,7 @@
 				<div class="col">
 					<div id="google_map">
 						<div class="map_container">
-							<div id="map"></div>
+						<div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.377276427222!2d-89.10611628465361!3d13.634799503666251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f633608006f11bd%3A0x284d255f92ba9cd1!2sComplejo+Deportivo+Municipal+Santiago+Texacuangos!5e0!3m2!1ses-419!2ssv!4v1558566185501!5m2!1ses-419!2ssv" width="1600px" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe><div>
 						</div>
 					</div>
 				</div>
@@ -105,21 +105,21 @@
 
 					<div class="reply">
 						
-						<div class="reply_title">Leave a reply</div>
+						<div class="reply_title">Dejanos un mensaje</div>
 						<div class="reply_form_container">
 							
 							<!-- Reply Form -->
 
-							<form id="reply_form" action="post">
+							<form id="reply_form" action="form.php" method="post" >
 								<div>
-									<input id="reply_form_name" class="input_field reply_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
-									<input id="reply_form_email" class="input_field reply_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
-									<input id="reply_form_subject" class="input_field reply_form_subject" type="text" placeholder="Subject" required="required" data-error="Subject is required.">
-									<textarea id="reply_form_message" class="text_field reply_form_message" name="message"  placeholder="Message" rows="4" required data-error="Please, write us a message."></textarea>
+									<input name="nombre" id="reply_form_name" class="input_field reply_form_name" type="text" placeholder="Nombre" required="required" data-error="Se requiere del nombre..">
+									<input name="correo" id="reply_form_email" class="input_field reply_form_email" type="email" placeholder="Correo" required="required" data-error="Favor escribir un correo valido.">
+									<input name="asunto" id="reply_form_subject" class="input_field reply_form_subject" type="text" placeholder="Asunto" required="required" data-error="Asunto es requerido.">
+									<textarea name="comentarios" id="reply_form_message" class="text_field reply_form_message" name="message"  placeholder="Mensaje" rows="4" required data-error="Por favor, escribe un mensaje."></textarea>
 								</div>
 								<div>
 									<button id="reply_form_submit" type="submit" class="reply_submit_btn trans_300" value="Submit">
-										send reply
+										Enviar
 									</button>
 								</div>
 
@@ -136,23 +136,22 @@
 
 					<div class="contact_info">
 
-						<div class="contact_title">Contact info</div>
+						<div class="contact_title">Información de contacto</div>
 						
 						<div class="contact_info_container">
 
 							<div class="logo contact_logo">
-								<a href="#">Ran<span>go</span></a>
+								<a href="#">Tadesa</a>
 							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae enim enim. Sed nec dignissim purus.</p>
+							<p>Talleres deportivos TADESA por un mejor El Salvador.</p>
 
 							<div class="address_container clearfix">
 								<div class="contact_info_icon">i</div>
 								<div class="contact_info_content">
 									<ul>
-										<li class="address">C/ Libertad, 34</li>
-										<li class="city">05200 Arévalo</li>
-										<li class="phone">0034 37483 2445 322</li>
-										<li class="email">hello@company.com</li>
+										<li class="address">Urbanización Nuevo Lourdes Poniente Primera etapa, block ff senda los Calistemos #6.</li>
+										<li class="phone">+503 2325-0172</li>
+										<li class="email">tadesa2019@gmail.com</li>
 									</ul>									
 								</div>
 							</div>
@@ -179,7 +178,7 @@
 	
 							<!-- Logo -->
 							<div class="logo footer_logo">
-								<a href="#">Tadesa</span></a>
+								<a href="#">Tadesa</a>
 							</div>
 	
 							<p>Talleres deportivos TADESA por un mejor El Salvador.</p>
@@ -243,6 +242,7 @@
 <script src="js/CustomGoogleMapMarker.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/contact_custom.js"></script>
+<script src="js/conecta.js"></script>
 </body>
 
 </html>
