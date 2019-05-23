@@ -1,12 +1,12 @@
 <?php
   include ("conexion.php");
-  $cod=$_REQUEST['CodigoBarra'];
+  $cod=$_REQUEST['Codigo'];
 
-  $query="DELETE FROM productos WHERE CodigoBarra ='$cod'";
+  $query="DELETE FROM Noticias WHERE CodNoticia ='$cod'";
   $resultado= $conexion->query($query);
 
   if ($resultado) {
-    header("Location: MProducto.php");
+    header("Location: MNoticias.php");
 
   }
 else {
